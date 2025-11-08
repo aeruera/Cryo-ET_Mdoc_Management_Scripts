@@ -1,10 +1,23 @@
 #Usage: python3 remove_missing_frames_from_mdocs.py
 
 """
+
 Remove blocks from mdoc if the referenced .eer file is missing.
+This occurred because of an interrupted transfer where randomly 
+one frame would be missing from every fourth or fifth tilt series. 
+WarpTools will crash if it can't find every frame referenced in 
+every mdoc. (Relion will actually skip a frame if it can't find it
+but this is not the case for Warp.)
+
+
 Requires that the mdoc subframepath collumn points to the correct location.
 Creates a .mdoc.bak file which is a copy of the original mdoc. 
-New mdoc has correct name with erased blocks.
+New mdoc has correct name with erased blocks references tilts that are not
+present on your machine.
+
+TO USE: Replace the EER_FOLDER and MDOC_FILES paths with the correct paths on
+your machine. Then run the script in the terminal by typing `python3 remove_missing_frames_from_mdoc.py`
+
 """
 
 #!/usr/bin/env python3
