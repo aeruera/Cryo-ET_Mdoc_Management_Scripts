@@ -1,7 +1,17 @@
-#How to use:
-#`python3 change_pixelsize_in_mdoc_bulk.py pixel_size *.mdoc`
-
 #!/usr/bin/env python3
+"""
+Author: Alice-Roza Eruera, SBGrid Consortium 
+
+Some mdoc files have the incorrect pixel size recorded in them. This 
+sometimes happens when the nominal pixel size was printed to the mdoc
+prior to microscope calibration. In cases where it's important to have 
+the calibrated pixel size recorded in the mdoc, you need to change the pixel
+size everywhere. 
+
+#How to use: `python3 change_pixelsize_in_mdoc_bulk.py pixel_size *.mdoc`
+
+""
+
 import sys
 import os
 import re
