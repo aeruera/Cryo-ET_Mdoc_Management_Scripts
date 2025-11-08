@@ -1,6 +1,18 @@
-#Author: Alice-Roza Eruera 01/08/2025
-#Delete mdocs from any subdirectories which do not have corresponding tilt-series
-#For use in tidying raw data where there are orphaned mdoc files
+"""
+Author: Alice-Roza Eruera 01/08/2025
+
+This script was written because we were processing a dataset where all the mdocs had been provided to us
+but only some of the frame series were provided. We therefore had a folder with a mixture of orphaned mdocs
+and mdocs associated with raw data. WarpTools will crash if you provide it with any orphaned mdocs. In this case, we 
+had many that were mixed in. This script will search the mdoc folder and the frame series folder and remove any 
+orphaned mdocs. 
+
+It was written for use with an .eer dataset but it should work for any format.
+
+TO USE: First, replace the two paths on lines 20 and 21. Then run the script in the terminal 
+using `python3 remove_orphan_mdoc_files.py`.  
+
+"""
 
 import os
 from pathlib import Path
