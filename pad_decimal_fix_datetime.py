@@ -1,19 +1,19 @@
-# -*- coding: utf-8 -*-
-
 """
 
-Created on Wed Sep  3 11:02:49 2025
+Author: Alice-Roza Eruera, SBGrid 
+
+The DateTime column in mdoc files is recorded in 2-digit year format 
+prior to 2023 and 4-digit year format after 2023 (to my understanding, SerialEM
+made this change in an update at that time). Some software has problems parsing 
+the mdoc file if the dateutil format is still in the 2-digit year...
+
+At that time, they also changed how many decimal places are used. 
 
 
-
-@author: alice
+TO USE: Replace the input_path and output_paths with the paths to your mdocs. 
+Then, execute the script by running in the terminal: `python3 pad_decimal_fix_datetime.py` 
 
 """
-
-# Fix mdoc file so that the DateTime column is in 4-digit year format 
-
-# Make sure all values with decimals are 2-digit decimal placeholders 
-
 
 
 import re
